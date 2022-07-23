@@ -1,12 +1,25 @@
+import { NextPage } from 'next';
 import type { AppProps } from 'next/app';
+import { ReactElement } from 'react';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 import GlobalStyles from '../styles/globals';
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+type NextPageWithLayout = NextPage & {
+  getLayout: (page: ReactElement) => NextPage;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
+  const getLayout = Component.getLayout ?? (page => page);
   return (
     <ThemeSwitcher>
-      <GlobalStyles />
-      <Component {...pageProps} />
+      <>
+        <GlobalStyles />
+        {getLayout(<Component {...pageProps} />)}
+      </>
     </ThemeSwitcher>
   );
 };

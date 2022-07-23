@@ -1,8 +1,12 @@
-import type { NextPage } from 'next';
-import * as S from '../styles/pages/index';
+import { ReactElement } from 'react';
+import Layout from '../components/Layout';
 
-const Home: NextPage = () => {
-  return <h1>Hello Next!</h1>;
+const Home = () => {
+  return <></>;
+};
+
+Home.getLayout = (page: ReactElement) => {
+  return <Layout>{page}</Layout>;
 };
 
 export default Home;

@@ -4,10 +4,18 @@ declare module 'styled-components' {
     name: string;
     colors: {
       pallete: {
-        primary: string;
+        azoxo: string;
+        white: string;
+        fucsia: string;
+        red: string;
+        green: string;
+        yellow: string;
+        black: string;
       };
       background: {
         default: string;
+        secondary: string;
+        terciary: string;
       };
     };
   }
