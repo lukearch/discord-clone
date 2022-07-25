@@ -16,8 +16,8 @@ const Navbar = () => {
           </S.HomeIcon>
         </Link>
         <S.Separator />
-        <Link href={'/channels/myserver'}>
-          <S.Server className={router.pathname === '/channels/myserver' ? 'active' : ''}>
+        <Link href={'/channels/myserver/geral'}>
+          <S.Server className={router.pathname.includes('myserver') ? 'active' : ''}>
             <Image src={'/assets/images/server-logo.jpg'} width={48} height={48} alt="" />
           </S.Server>
         </Link>

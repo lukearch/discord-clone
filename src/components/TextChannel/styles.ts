@@ -9,8 +9,12 @@ export const Channel = styled.div`
   cursor: pointer;
   border-radius: 0.25rem;
   background-color: ${props => props.theme.colors.background.secondary};
-  transition: all 0.2s ease-out;
   padding: 0.375rem 0.5rem;
+  margin-bottom: 0.125rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   span {
     transition: all 0.2s ease-out;
@@ -26,13 +30,21 @@ export const Channel = styled.div`
     span {
       color: ${props => props.theme.colors.pallete.white};
     }
+
+    div {
+      filter: brightness(0.8);
+    }
   }
 
   &:hover {
-    filter: brightness(1.4);
+    filter: brightness(1.2);
 
     span {
       color: ${props => props.theme.colors.pallete.white};
+    }
+
+    div {
+      filter: brightness(0.8);
     }
   }
 `;

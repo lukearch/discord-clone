@@ -30,6 +30,8 @@ export const ServerHeader = styled.div`
   }
 `;
 
+export const HeaderArrow = styled.div``;
+
 export const ServerChannels = styled.div`
   width: 100%;
   height: 100%;
@@ -52,4 +54,9 @@ export const ServerChannels = styled.div`
     background-color: ${props => props.theme.colors.background.terciary};
     background-clip: padding-box;
   }
+`;
+
+export const Path = styled.path`
+  stroke: ${props => props.theme.colors.pallete.white};
+  stroke-width: 2;
 `;
