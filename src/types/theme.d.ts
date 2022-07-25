@@ -11,11 +11,13 @@ declare module 'styled-components' {
         green: string;
         yellow: string;
         black: string;
+        gray: string;
       };
       background: {
         default: string;
         secondary: string;
         terciary: string;
+        quaternary: string;
       };
     };
   }

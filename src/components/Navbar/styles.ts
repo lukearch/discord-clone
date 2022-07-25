@@ -8,23 +8,22 @@ export const NavbarContainer = styled.div`
   position: relative;
 `;
 
-export const Server = styled.div`
+const Circle = styled.div`
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
   background-color: ${props => props.theme.colors.background.default};
-  margin-bottom: 0.5rem;
   transition: all 0.2s ease-out;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+`;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  &:after {
+export const Server = styled(Circle)`
+  &:before {
     content: '';
     transition: all 0.2s ease-out;
   }
@@ -45,7 +44,7 @@ export const Server = styled.div`
     }
   }
 
-  &.selected {
+  &.active {
     background-color: ${props => props.theme.colors.pallete.azoxo};
     border-radius: 35%;
 
@@ -68,19 +67,8 @@ export const Servers = styled.div`
   align-items: center;
 `;
 
-export const HomeIcon = styled.div`
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-color: ${props => props.theme.colors.background.default};
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease-out;
-  cursor: pointer;
-
-  &:after {
+export const HomeIcon = styled(Circle)`
+  &:before {
     content: '';
     transition: all 0.2s ease-out;
   }
@@ -101,7 +89,7 @@ export const HomeIcon = styled.div`
     }
   }
 
-  &.selected {
+  &.active {
     background-color: ${props => props.theme.colors.pallete.azoxo};
     border-radius: 35%;
 
@@ -126,24 +114,43 @@ export const Separator = styled.div`
   margin-bottom: 0.5rem;
 `;
 
-export const NewServerButton = styled.div`
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-color: ${props => props.theme.colors.background.default};
-  margin-bottom: 0.5rem;
-  transition: all 0.2s ease-out;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
+export const NewServerButton = styled(Circle)`
   &:hover {
     background-color: ${props => props.theme.colors.pallete.green};
     border-radius: 35%;
+
+    path {
+      stroke: ${props => props.theme.colors.pallete.white};
+    }
   }
+`;
+
+export const ExploreServerButton = styled(NewServerButton)`
+  &:hover {
+    path {
+      fill: ${props => props.theme.colors.pallete.white};
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      background-color: ${props => props.theme.colors.pallete.white};
+      width: 0.25rem;
+      height: 1.25rem;
+      border-top-right-radius: 30%;
+      border-bottom-right-radius: 30%;
+    }
+  }
+`;
+
+export const Path = styled.path`
+  fill: ${props => props.theme.colors.pallete.green};
+  transition: all 0.2s ease-out;
+`;
+
+export const StrokePath = styled.path`
+  stroke: ${props => props.theme.colors.pallete.green};
+  transition: all 0.2s ease-out;
+  stroke-width: 2;
 `;

@@ -1,7 +1,9 @@
 import { NextPage } from 'next';
+
 import type { AppProps } from 'next/app';
 import { ReactElement } from 'react';
 import ThemeSwitcher from '../components/ThemeSwitcher';
+import Fonts from '../styles/fonts';
 import GlobalStyles from '../styles/globals';
 
 type NextPageWithLayout = NextPage & {
@@ -17,6 +19,7 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
     <ThemeSwitcher>
       <>
+        <Fonts />
         <GlobalStyles />
         {getLayout(<Component {...pageProps} />)}
       </>

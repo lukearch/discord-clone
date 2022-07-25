@@ -9,11 +9,13 @@ const light = {
       green: '#57F287',
       yellow: '#FEE75C',
       black: '#000000',
+      gray: '#8e9297',
     },
     background: {
       default: '#1a1a1a',
       secondary: '#2f3136',
       terciary: '#202225',
+      quaternary: '#292b2f',
     },
   },
 };
