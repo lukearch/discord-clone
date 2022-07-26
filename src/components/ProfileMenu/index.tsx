@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { useTheme } from 'styled-components';
+
 import { Profile } from '../../types/profile';
 import * as S from './styles';
 
@@ -10,6 +12,12 @@ const ProfileMenu = () => {
     bio: 'I am a software developer',
     email: 'lukearch.sh@gmail.com',
     phone: '+5511998888888',
+    roles: [
+      {
+        name: 'developer',
+        color: useTheme().colors.pallete.azoxo,
+      },
+    ],
   };
 
   return (

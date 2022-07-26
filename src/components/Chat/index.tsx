@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { useTheme } from 'styled-components';
 
 import { Message } from '../../types/message';
 import { Profile } from '../../types/profile';
@@ -21,6 +22,12 @@ const Chat = ({ messages, setMessages }: Props) => {
     bio: 'I am a software developer',
     email: 'lukearch.sh@gmail.com',
     phone: '+5511998888888',
+    roles: [
+      {
+        name: 'developer',
+        color: useTheme().colors.pallete.azoxo,
+      },
+    ],
   };
 
   const scrollToBottom = () => {

@@ -1,3 +1,5 @@
+import { Role } from './role';
+
 export interface Profile {
   id: string;
   name: string;
@@ -5,4 +7,5 @@ export interface Profile {
   bio: string;
   email: string;
   phone: string;
+  roles?: Role[];
 }

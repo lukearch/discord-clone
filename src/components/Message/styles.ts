@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const MessageContainer = styled.div`
   display: flex;
   width: 100%;
-  height: 2.5rem;
   margin-top: 1.0625rem;
 `;
 
@@ -33,6 +32,7 @@ export const MessageInfo = styled.div`
 export const ProfileName = styled.span`
   font-size: 1;
   color: ${props => props.theme.colors.pallete.white};
+  font-weight: 700;
 `;
 
 export const MessageInfoTime = styled.span`
@@ -48,9 +48,12 @@ export const MessageInfoTime = styled.span`
 export const MessageInfoText = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 0.35rem;
 `;
 
 export const MessageText = styled.p`
   color: ${props => props.theme.colors.text.default};
   font-weight: 300;
+  max-width: 95%;
+  margin-bottom: 1rem;
 `;

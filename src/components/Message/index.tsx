@@ -48,7 +48,9 @@ const MessageText = ({ profile, message, onLoad }: Props) => {
         </S.Avatar>
         <S.MessageInfo>
           <S.MessageInfoText>
-            <S.ProfileName>{profile.name}</S.ProfileName>
+            <S.ProfileName style={{ color: profile.roles ? profile.roles[0].color : '' }}>
+              {profile.name}
+            </S.ProfileName>
             <S.MessageInfoTime>{messageTime}</S.MessageInfoTime>
           </S.MessageInfoText>
           <S.MessageText>{message.text}</S.MessageText>
