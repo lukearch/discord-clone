@@ -13,9 +13,15 @@ const dark = {
     },
     background: {
       default: '#36393f',
+      darker: '#4f545c',
+      input: '#40444B',
       secondary: '#2f3136',
       terciary: '#202225',
       quaternary: '#292b2f',
+    },
+    text: {
+      default: '#F5F5F5',
+      secondary: '#b9bbbe',
     },
   },
 };

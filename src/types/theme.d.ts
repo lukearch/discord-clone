@@ -15,9 +15,15 @@ declare module 'styled-components' {
       };
       background: {
         default: string;
+        input: string;
+        darker: string;
         secondary: string;
         terciary: string;
         quaternary: string;
+      };
+      text: {
+        default: string;
+        secondary: string;
       };
     };
   }

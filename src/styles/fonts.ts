@@ -4,6 +4,13 @@ const Fonts = createGlobalStyle`
   @font-face {
     font-family: 'Whitney';
     font-style: normal;
+    font-weight: 300;
+    src: url('/fonts/whitneylight.otf');
+  }
+
+  @font-face {
+    font-family: 'Whitney';
+    font-style: normal;
     font-weight: 400;
     src: url('/fonts/whitneymedium.otf');
   }

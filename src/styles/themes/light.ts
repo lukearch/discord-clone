@@ -13,9 +13,15 @@ const light = {
     },
     background: {
       default: '#1a1a1a',
+      darker: '#4f545c',
+      input: '#dcddde',
       secondary: '#2f3136',
       terciary: '#202225',
       quaternary: '#292b2f',
+    },
+    text: {
+      default: '#F5F5F5',
+      secondary: '#b9bbbe',
     },
   },
 };

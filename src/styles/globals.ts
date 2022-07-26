@@ -22,6 +22,10 @@ const GlobalStyles = createGlobalStyle`
     -ms-user-select: none; 
     user-select: none;
   }
+
+  input {
+    font-family: 'Whitney', sans-serif;
+  }
 `;
 
 export default GlobalStyles;

@@ -1,11 +1,16 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
+
+import Chat from '../../../components/Chat';
 import Layout from '../../../components/Layout';
+import MembersPanel from '../../../components/MembersPanel';
 import ServerHeader from '../../../components/ServerHeader';
 import * as S from '../../../styles/pages/channel';
+import { Message } from '../../../types/message';
 
 export const Channel = () => {
+  const [messages, setMessages] = useState<Message[]>([]);
   const router = useRouter();
   const { channel } = router.query;
 
@@ -16,6 +21,10 @@ export const Channel = () => {
       </Head>
       <S.ChannelPageContainer>
         <ServerHeader />
+        <S.ChannelContent>
+          <Chat messages={messages} setMessages={setMessages} />
+          <MembersPanel />
+        </S.ChannelContent>
       </S.ChannelPageContainer>
     </>
   );
