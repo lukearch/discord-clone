@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+
 import { Message } from '../../types/message';
 import { Profile } from '../../types/profile';
 import MessageText from '../Message';
@@ -28,17 +28,16 @@ const Chat = ({ messages, setMessages }: Props) => {
     if (chat) chat.scrollTop = chat.scrollHeight;
   };
 
-  const sendMessage = (message: string) => {
-    setMessages([
-      ...messages,
-      {
-        id: Math.round(Math.random() * 1000).toString(),
-        createdAt: new Date(),
-        text: message,
-        user: profile,
-        channel: channel,
-      },
-    ]);
+  const sendMessage = (text: string) => {
+    const message = {
+      id: Math.round(Math.random() * 1000).toString(),
+      createdAt: new Date(),
+      text,
+      user: profile,
+      channel: channel,
+    };
+
+    setMessages([...messages, message]);
   };
 
   const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {

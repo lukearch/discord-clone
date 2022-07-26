@@ -7,6 +7,11 @@ export const MessageContainer = styled.div`
   margin-top: 1.0625rem;
 `;
 
+export const RecentMessageContainer = styled.div`
+  display: flex;
+  width: 100%;
+`;
+
 export const Avatar = styled.div`
   width: 2.5rem;
   height: 2.5rem;
